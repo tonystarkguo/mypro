@@ -1,10 +1,10 @@
 import axios from 'axios'
 import { MessageBox, Toast} from 'mint-ui'
 import store from '@/store'
-import {bsaeUrl } from '../api/env'
+import {baseUrl } from '../api/env'
 // create an axios instance
 const service = axios.create({
-  baseURL: bsaeUrl , // url = base url + request url
+  baseURL: baseUrl, // url = base url + request url
   // withCredentials: true, // send cookies when cross-domain requests
   timeout: 5000 // request timeout
 })
