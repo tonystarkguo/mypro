@@ -22,12 +22,12 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  @-webkit-keyframes fade-in {
+  @keyframes fade-in {
     0% {
       opacity: 0; /*初始状态 透明度为0*/
     }
     50% {
-      opacity: 0; /*中间状态 透明度为0*/
+      opacity: 0.5; /*中间状态 透明度为0*/
     }
     100% {
       opacity: 1; /*结尾状态 透明度为1*/
@@ -72,7 +72,7 @@ export default {
       }
       .first-words {
         opacity: 0;
-        animation: fade-in 2s ease 0s 1;
+        animation: fade-in 2s ease 0.5s 1;
         /*规定动画的最后状态为结束状态*/
         animation-fill-mode: forwards;
       }
