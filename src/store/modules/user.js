@@ -1,9 +1,10 @@
+/* eslint-disable prefer-promise-reject-errors */
 import { login, logout, getInfo } from '../../api/user'
 // import { getToken, setToken, removeToken } from '../../utils/auth'
 // import router, { resetRouter } from '../../router'
 
 const state = {
-  token: "",
+  token: ' ',
   name: '',
   avatar: '',
   introduction: '',
@@ -51,6 +52,7 @@ const actions = {
         const { data } = response
 
         if (!data) {
+          // eslint-disable-next-line prefer-promise-reject-errors
           reject('Verification failed, please Login again.')
         }
 
@@ -110,6 +112,7 @@ const actions = {
       // resetRouter()
 
       // generate accessible routes map based on roles
+      // eslint-disable-next-line no-unused-vars
       const accessRoutes = await dispatch('permission/generateRoutes', roles, { root: true })
 
       // dynamically add accessible routes

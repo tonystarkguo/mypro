@@ -1,4 +1,6 @@
+/* eslint-disable standard/object-curly-even-spacing */
 import axios from 'axios'
+// eslint-disable-next-line standard/object-curly-even-spacing
 import { MessageBox, Toast} from 'mint-ui'
 import store from '@/store'
 import {baseUrl } from '../api/env'
