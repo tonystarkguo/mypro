@@ -53,12 +53,12 @@ export default {
     }
   }
   .start{
-    height: 100%;
+    height: 100vh;
     .bgdiv{
       background-image: url("http://47.101.130.9:90/34.jpg");
       background-repeat: no-repeat;
       background-size: 100% 100%;
-      height: 100%;
+      height: 100vh;
       position: relative;
       filter: blur(5px);
       }
@@ -66,12 +66,12 @@ export default {
       position: absolute;
       left: 0;
       top: 0;
-      height: 100%;
+      height: 100vh;
       width: 100%;
       color:white;
       font-size: 22px;
       .strList{
-        height: 100%;
+        height: 100vh;
         width: 100%;
       }
       p{
