@@ -51,7 +51,7 @@
 <template>
     <div class="login">
         <mt-header class="header">
-            <router-link to="/" slot="left">
+            <router-link :to="{path:this.$route.query['url']||'/home'}" slot="left">
                 <mt-button icon="back">返回</mt-button>
             </router-link>
         </mt-header>
@@ -93,6 +93,11 @@ import { Toast } from 'mint-ui';
                     return 
                 }
                 /* 登陆 */
+            },
+            topath(e){
+                e.preventDefault();
+                const {url="/home"}=this.$route.query;
+                this.$route.path({path:url});
             }
         }
 

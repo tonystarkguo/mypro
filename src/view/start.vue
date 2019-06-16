@@ -22,7 +22,7 @@ export default {
   methods:{
     jump(){
       this.$router.push({
-        path:'login',
+        path:'/home',
         params:{},
       })
     }

@@ -1,7 +1,12 @@
 <template>
   <div id="app">
     <!--<img src="./assets/logo.png">-->
-    <router-view/>
+    <transition name="slide-fade">
+      <keep-alive>
+        <router-view></router-view>
+      </keep-alive>
+    </transition>
+    <!-- <router-view/> -->
   </div>
 </template>
 
@@ -28,5 +33,24 @@ html,body{
   height: 100%;
   width: 100%;
   /*margin-top: 60px;*/
+}
+img{
+                display: block;
+                max-width: 100%;
+            }
+            a{
+              text-decoration: none;
+            }
+
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-leave-active {
+  transition: all .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active for below version 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
 }
 </style>
