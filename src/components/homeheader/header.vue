@@ -51,7 +51,7 @@ import  searchheaderimg from "../../assets/icon/homesear.png"
              padding: 0 0.3rem 0 0.3rem ;
          }
          .center{
-             width: 65%;
+             width: 90%;
              padding: 0.5rem 0;
          }
     }
