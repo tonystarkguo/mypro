@@ -1,8 +1,6 @@
 <template>
   <div class="home">
-    <header>
-      <homeheader/>
-    </header>
+    <searchBox/>
     <div class="sliper">
       <mt-swipe :auto="4000">
         <mt-swipe-item>
@@ -60,14 +58,16 @@
 </template>
 
 <script>
-import homeheader from "../components/homeheader/header";
+import homeheader from '../components/homeheader/header';
+import searchBox from"../components/searchBox/index"
 export default {
-  name: "home",
+  name: 'home',
   data() {
-    return {};
+    return {}
   },
   components: {
-    homeheader
+    homeheader,
+    searchBox
   }
 };
 </script>
@@ -81,6 +81,7 @@ export default {
     height: 30vh;
     img {
       width: 100%;
+      height:100%;
     }
   }
   .activity{
@@ -106,7 +107,7 @@ export default {
   }
 }
 .content {
-    padding-top: 1rem;
+    padding-top: 0.5rem;
   > div {
     // width: 25%;
     display: flex;
@@ -117,11 +118,11 @@ export default {
     align-content: center;
     align-items: center;
     text-align: center;
-    height: 20vh;
+    height: 15vh;
     > div {
       width: 25%;
       p{
-          padding-top: 1rem;
+          padding-top: 0.5rem;
       }
       img {
        width: 3rem;
