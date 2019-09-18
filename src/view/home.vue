@@ -49,45 +49,63 @@
       </div>
     </div>
     <div class="end">
-        <h4>*  推荐 *</h4>
-        <div class="morelist">
-
+      <!--app 下载链接-->
+      <div class="promotion-app">
+        <div class="promotion-app-block"><img src="//pic.c-ctrip.com/platform/h5/home/promotion-app-log.png" alt="">
+          <div class="promotion-app-text">
+            <h2>app</h2>
+            <p>服务</p>
+          </div>
         </div>
+        <div class="promotion-app-download">
+            <button>立即下载</button>
+        </div>
+      </div>
+      <h4 style="text-align: center">* 推荐 *</h4>
+      <div class="morelist">
+
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import homeheader from '../components/homeheader/header';
-import searchBox from"../components/searchBox/index"
+import homeheader from '../components/homeheader/header'
+import searchBox from '../components/searchBox/index'
+
 export default {
   name: 'home',
-  data() {
+  data () {
     return {}
   },
   components: {
     homeheader,
     searchBox
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>
-.home {
-  height: 100%;
-  width: 100%;
-  .sliper {
+  .home {
+    height: 100%;
     width: 100%;
-    height: 30vh;
-    img {
+
+    .sliper {
       width: 100%;
-      height:100%;
+      height: 30vh;
+      border-radius: 0 0 10% 10%;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
-  }
-  .activity{
-      i{
+
+    .activity {
+      i {
         display: block;
-       width: 3rem;
+        width: 3rem;
         height: 3rem;
         background-image: url("https://css.mafengwo.net/mobile/images/indexv4/i_nav3.png");
         background-repeat: no-repeat;
@@ -95,41 +113,104 @@ export default {
         background-position: 1px 0;
         margin: auto;
       }
-      >:nth-child(2)>i{
-           background-position:-8.9rem -3rem;
+
+      > :nth-child(2) > i {
+        background-position: -8.9rem -3rem;
       }
-      >:nth-child(3)>i{
-           background-position: -5.9rem -3rem;
+
+      > :nth-child(3) > i {
+        background-position: -5.9rem -3rem;
       }
-      >:last-child>i{
-           background-position: -8.9rem 0rem;
+
+      > :last-child > i {
+        background-position: -8.9rem 0rem;
       }
+    }
   }
-}
-.content {
+
+  .content {
     padding-top: 0.5rem;
-  > div {
-    // width: 25%;
+    box-shadow: 0px 5px 5px rgba(0,0,0,0.08);
+    z-index: 1;
+    position: relative;
+    top: -40px;
+    > div {
+      // width: 25%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      justify-items: center;
+      align-content: center;
+      align-items: center;
+      text-align: center;
+      height: 15vh;
+
+      > div {
+        width: 25%;
+
+        p {
+          padding-top: 0.5rem;
+        }
+
+        img {
+          width: 3rem;
+          height: 3rem;
+          margin: auto;
+        }
+      }
+    }
+  }
+
+  .promotion-app {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-    justify-items: center;
-    align-content: center;
+    background: #fff;
+    padding: 10px 0;
+    transition: all 0.5s;
     align-items: center;
-    text-align: center;
-    height: 15vh;
-    > div {
-      width: 25%;
-      p{
-          padding-top: 0.5rem;
+    margin:10px 0;
+    box-shadow: 1px 2px 6px rgba(0,0,0,.08);
+    .promotion-app-block{
+      flex: 1;
+      padding: 0 15px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      img{
+        width: 36px;
+        height: 36px;
+        margin-right: 10px;
       }
-      img {
-       width: 3rem;
-        height: 3rem;
-        margin: auto;
+      .promotion-app-text{
+        color: #666;
+        font-size: 12px;
+        font-family: PingFangSC-regular,Tahoma,"Lucida Grande",Verdana,"Microsoft Yahei",STXihei,hei;
+        font-weight: 400;
+        h2{
+          font-size: 15px;
+          color: #222;
+          font-weight: 400;
+        }
+
+      }
+    }
+    .promotion-app-download{
+      padding: 0 15px;
+      button{
+        width: 80px;
+        height: 28px;
+        line-height: 28px;
+        color: #fff;
+        background: #3a99f6;
+        font-size: 13px;
+        border-radius: 14px;
+        outline: 0;
+        border: 0;
       }
     }
   }
-}
 </style>

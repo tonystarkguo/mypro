@@ -13,8 +13,8 @@
             height: 20vh;
             line-height: 20vh;
             >div{
-                margin-top:10vh;
-                margin-bottom:5vh; 
+                margin-top:5vh;
+                margin-bottom:5vh;
                 height: 10vh;
                 width: 10vh;
                 padding: 0.6rem;
@@ -86,11 +86,11 @@ import { Toast } from 'mint-ui';
                 e.preventDefault();
                 if(!this.username){
                     Toast('输入账号');
-                    return 
+                    return
                 }
                 if(!this.password){
                     Toast('输入密码');
-                    return 
+                    return
                 }
                 /* 登陆 */
             },
