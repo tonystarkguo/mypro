@@ -29,6 +29,11 @@ const router = new Router({
       path: '*',
       name: 'nopag',
       component: () => import('../view/404.vue')
+    },
+    {
+      path: '/shoppingCart',
+      name: 'shoppingCart',
+      component: () => import('../view/shoppingCart.vue')
     }]
 })
 

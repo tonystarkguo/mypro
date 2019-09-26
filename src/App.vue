@@ -24,6 +24,7 @@ export default {
 html,body{
   height: 100%;
   width: 100%;
+  font-size:0;
 }
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -33,6 +34,8 @@ html,body{
   color: #2c3e50;
   height: 100%;
   width: 100%;
+  font-size:12px;
+  user-select:none;
   /*margin-top: 60px;*/
 }
 img{
