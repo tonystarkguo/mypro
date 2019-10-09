@@ -72,35 +72,37 @@
 </template>
 
 <script>
-import { Toast } from 'mint-ui';
-    export default {
-        name:"login",
-        data () {
-            return {
-                username:"test",
-                password:"12345",
-            }
-        },
-        methods:{
-            btnlogin(e){
-                e.preventDefault();
-                if(!this.username){
-                    Toast('输入账号');
-                    return
-                }
-                if(!this.password){
-                    Toast('输入密码');
-                    return
-                }
-                /* 登陆 */
-            },
-            topath(e){
-                e.preventDefault();
-                const {url="/home"}=this.$route.query;
-                this.$route.path({path:url});
-            }
-        }
-
+import { Toast } from 'mint-ui'
+import {login} from '../api/user'
+export default {
+  name: 'login',
+  data () {
+    return {
+      username: 'test',
+      password: '12345'
     }
-</script>
+  },
+  methods: {
+    btnlogin (e) {
+      e.preventDefault()
+      if (!this.username) {
+        Toast('输入账号')
+        return
+      }
+      if (!this.password) {
+        Toast('输入密码')
+      }
+      /* 登陆 */
+      login().then((res) => {
 
+      }).catch(e => {})
+    },
+    topath (e) {
+      e.preventDefault()
+      const {url = '/home'} = this.$route.query
+      this.$route.path({path: url})
+    }
+  }
+
+}
+</script>

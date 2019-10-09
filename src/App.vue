@@ -24,7 +24,7 @@ export default {
 html,body{
   height: 100%;
   width: 100%;
-  font-size:0;
+  /*font-size:12px;*/
 }
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;

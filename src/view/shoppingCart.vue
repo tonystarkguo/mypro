@@ -1,7 +1,7 @@
 <template>
     <div class="shopCart">
       <transition-group name="shopfade">
-        <shop-inline @propChangeNum="changeShowNum"  v-for="(value,index) in shopList"  :shopId="value.shopId" :key="index" :shopPrice="value.shopPrice" :shopNum.sync="value.shopNum"  :url="value.url"></shop-inline>
+        <shop-inline @propChangeNum="changeShowNum"  v-for="(value) in shopList"  :shopId="value.shopId" :key="value.shopId" :shopPrice="value.shopPrice" :shopNum.sync="value.shopNum"  :url="value.url"></shop-inline>
         <div class="p-showTotalPrice">
           <div class="p-checkAll">
             <label ><input type="checkbox" @click="selectAll">全选</label>

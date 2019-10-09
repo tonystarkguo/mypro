@@ -131,9 +131,6 @@ export default {
   .content {
     padding-top: 0.5rem;
     box-shadow: 0px 5px 5px rgba(0,0,0,0.08);
-    z-index: 1;
-    position: relative;
-    top: -40px;
     > div {
       // width: 25%;
       display: flex;
